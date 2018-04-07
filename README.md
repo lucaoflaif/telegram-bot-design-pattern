@@ -1,6 +1,6 @@
 # Telegram Bot design pattern
 
-Are you interested in a cleam telegram bot' structure? This pattern allows you to organize all your function, db connections, models, env files in a pretty and organised way.
+Are you interested in a clean telegram bot's structure? This pattern allows you to organize all your function, db connections, models, env files in a pretty and organised way.
 
 This pattern uses the fabolous [pyTelegramBotAPI](https://github.com/eternnoir/pyTelegramBotAPI]) library as its message handler.
 
@@ -41,7 +41,7 @@ Let's see the structure.
 
 ### Functions
 
-Obviously, the pattern will handle the Bot function's, simply, all your functions must be saved in the [functions](functions/) folder, each function will be a class in a python file that **must start with one or more underscore symbol**. Let's the [Example function file](functions/_example_function.py).
+Obviously, the pattern will handle the Bot function's, simply, all your functions must be saved in the [functions](telegram-bot-design-pattern/functions/) folder, each function will be a class in a python file that **must start with one or more underscore symbol**. Let's open the [Example function file](functions/_example_function.py).
 
 ```python
 class ExampleReply(object):
@@ -80,9 +80,10 @@ class ExampleReply(object):
 as you can see the code is well commented:
 
 -**`__init__()`**: to the constructor function the core mechanism will pass:
+
 | env | bot | db  |
-|:---|:---:|---:|
-|The object thanks to wich you'll be able to access your .env file|  The Telegram Bot object instance (See the pyTelegramBotAPI doc's ['TeleBot'](https://github.com/eternnoir/pyTelegramBotAPI#telebot) section)  |  Te object that will allow you to use your database connection object  |
+|:--:|:-:|:--:|
+|The object thanks to wich you'll be able to access your .env file | The Telegram Bot object instance (See the pyTelegramBotAPI doc's ['TeleBot'](https://github.com/eternnoir/pyTelegramBotAPI#telebot) section) | Te object that will allow you to use your database connection object |
 
 -**info()**: here you can specify all the info allowing the Bot instance to handle your message. I.E. the statement:
 
@@ -116,7 +117,7 @@ __all__ = ['ExampleReply',]
 
 "Okay, now, for every message, I'd want to display the text of the message in my terminal, how can I implement this in my function?"
 
-Simply, don't, God gave us Middlewares. A middleware is executed before **every** message. Let's see a middleware structure opening the [middlewares/_example_middleware.py](middlewares/_example_middleware.py) file. (Like functions, **every middleware file must start with one or more underscore symbol**.)
+Simply, don't, God gave us Middlewares. A middleware is executed before **every** message. Let's see a middleware structure opening the [middlewares/_example_middleware.py](telegram-bot-design-pattern/middlewares/_example_middleware.py) file. (Like functions, **every middleware file must start with one or more underscore symbol**.)
 
 ```python
 class ExampleMiddleware:
@@ -158,6 +159,7 @@ So now, if we want to display, for each request, the text of the message, our mi
 ```
 
 The message text will be printed and then the core mechanism will pass the message object to all the other middlewares first, and to the functions then.
+<<<<<<< HEAD
 
 Once your middleware class is ready, import it in the middlewares/__init__.py and add its name in the `__all__` array:
 
@@ -168,10 +170,12 @@ from ._example_middleware import ExampleMiddleware
 
 __all__ = ['ExampleMiddleware',]
 ```
+=======
+>>>>>>> ff9efda87f3e240dd9630ea1ece22c29bd6e3a1a
 
 ## Authors
 
-CryptoTrackerBot is mantained by Luca Di Vita - [GitHub](https://github.com/lucaoflaif) - [Telegram](www.google.it)
+telegram-bot-design-pattern is mantained by Luca Di Vita - [GitHub](https://github.com/lucaoflaif) - [Telegram](https://t.me/lucaoflaif)
 
 ## License
 
