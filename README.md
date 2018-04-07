@@ -41,7 +41,7 @@ Let's see the structure.
 
 ### Functions
 
-Obviously, the pattern will handle the Bot function's, simply, all your functions must be saved in the [functions](functions/) folder, each function will be a class in a python file that **must start with one or more underscore symbol**. Let's open the [Example function file](functions/_example_function.py).
+Obviously, the pattern will handle the Bot function's, simply, all your functions must be saved in the [functions](telegram-bot-design-pattern/functions/) folder, each function will be a class in a python file that **must start with one or more underscore symbol**. Let's open the [Example function file](functions/_example_function.py).
 
 ```python
 class ExampleReply(object):
@@ -80,9 +80,10 @@ class ExampleReply(object):
 as you can see the code is well commented:
 
 -**`__init__()`**: to the constructor function the core mechanism will pass:
+
 | env | bot | db  |
-|:---|:---:|---:|
-|The object thanks to wich you'll be able to access your .env file|  The Telegram Bot object instance (See the pyTelegramBotAPI doc's ['TeleBot'](https://github.com/eternnoir/pyTelegramBotAPI#telebot) section)  |  Te object that will allow you to use your database connection object  |
+|:--:|:-:|:--:|
+|The object thanks to wich you'll be able to access your .env file | The Telegram Bot object instance (See the pyTelegramBotAPI doc's ['TeleBot'](https://github.com/eternnoir/pyTelegramBotAPI#telebot) section) | Te object that will allow you to use your database connection object |
 
 -**info()**: here you can specify all the info allowing the Bot instance to handle your message. I.E. the statement:
 
@@ -106,7 +107,7 @@ See the pyTelegramBotAPI doc's ['a simple echo bot'](https://github.com/eternnoi
 
 "Okay, now, for every message, I'd want to display the text of the message in my terminal, how can I implement this in my function?"
 
-Simply, don't, God gave us Middlewares. A middleware is executed before **every** message. Let's see a middleware structure opening the [middlewares/_example_middleware.py](middlewares/_example_middleware.py) file. (Like functions, **every middleware file must start with one or more underscore symbol**.)
+Simply, don't, God gave us Middlewares. A middleware is executed before **every** message. Let's see a middleware structure opening the [middlewares/_example_middleware.py](telegram-bot-design-pattern/middlewares/_example_middleware.py) file. (Like functions, **every middleware file must start with one or more underscore symbol**.)
 
 ```python
 class ExampleMiddleware:
