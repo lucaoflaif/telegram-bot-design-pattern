@@ -148,7 +148,6 @@ So now, if we want to display, for each request, the text of the message, our mi
 ```
 
 The message text will be printed and then the core mechanism will pass the message object to all the other middlewares first, and to the functions then.
-Let's do something 
 
 ## Authors
 
