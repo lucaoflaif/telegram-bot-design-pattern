@@ -103,7 +103,7 @@ See the pyTelegramBotAPI doc's ['a simple echo bot'](https://github.com/eternnoi
 
 -**main()**: your function's logic lies here, you can access the Bot methods through the `self.bot` local variable, and the incoming [message object](https://github.com/eternnoir/pyTelegramBotAPI/blob/9ae20b48154fe39aa92049fdb2336f6246aaa13f/telebot/types.py#L251) through the message param.
 
-Once your function class is ready, import it in the function/__init__.py and add its name in the `__all__` array:
+Once your function class is ready, import it in the `function/__init__.py` and add its name in the `__all__` array:
 
 ```python
 # functions/__init__.py file
@@ -159,9 +159,8 @@ So now, if we want to display, for each request, the text of the message, our mi
 ```
 
 The message text will be printed and then the core mechanism will pass the message object to all the other middlewares first, and to the functions then.
-<<<<<<< HEAD
 
-Once your middleware class is ready, import it in the middlewares/__init__.py and add its name in the `__all__` array:
+Once your middleware class is ready, import it in the `middlewares/__init__.py` and add its name in the `__all__` array:
 
 ```python
 # middlewares/__init__.py file
@@ -170,8 +169,6 @@ from ._example_middleware import ExampleMiddleware
 
 __all__ = ['ExampleMiddleware',]
 ```
-=======
->>>>>>> ff9efda87f3e240dd9630ea1ece22c29bd6e3a1a
 
 ## Authors
 
