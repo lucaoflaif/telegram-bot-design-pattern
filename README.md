@@ -1,6 +1,6 @@
 # Telegram Bot design pattern
 
-Are you interested in a cleam telegram bot' structure? This pattern allows you to organize all your function, db connections, models, env files in a pretty and organised way.
+Are you interested in a clean telegram bot's structure? This pattern allows you to organize all your function, db connections, models, env files in a pretty and organised way.
 
 This pattern uses the fabolous [pyTelegramBotAPI](https://github.com/eternnoir/pyTelegramBotAPI]) library as its message handler.
 
@@ -41,7 +41,7 @@ Let's see the structure.
 
 ### Functions
 
-Obviously, the pattern will handle the Bot function's, simply, all your functions must be saved in the [functions](functions/) folder, each function will be a class in a python file that **must start with one or more underscore symbol**. Let's the [Example function file](functions/_example_function.py).
+Obviously, the pattern will handle the Bot function's, simply, all your functions must be saved in the [functions](functions/) folder, each function will be a class in a python file that **must start with one or more underscore symbol**. Let's open the [Example function file](functions/_example_function.py).
 
 ```python
 class ExampleReply(object):
