@@ -152,7 +152,7 @@ The message text will be printed and then the core mechanism will pass the messa
 
 ## Authors
 
-CryptoTrackerBot is mantained by Luca Di Vita - [GitHub](https://github.com/lucaoflaif) - [Telegram](www.google.it)
+CryptoTrackerBot is mantained by Luca Di Vita - [GitHub](https://github.com/lucaoflaif) - [Telegram](https://t.me/lucaoflaif)
 
 ## License
 
