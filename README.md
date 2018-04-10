@@ -135,7 +135,7 @@ class ExampleMiddleware:
         # param message: telebot.types.Message object
         # this function must return the message
 
-        print("Message %(msg_text)s seen by the %(class_name)s middleware!" % ({ 
+        print("Message %(msg_text)s seen by the %(class_name)s middleware!" % ({
             'msg_text': message.text,
             'class_name': self.__class__.__name__
             }))
