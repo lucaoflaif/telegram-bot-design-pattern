@@ -24,7 +24,6 @@ class Bot:
         self.bot.polling()
 
     def _discover_middlewares(self):
-        print("DIR", dir(middlewares))
         for middleware in dir(middlewares):
             if str(middleware).startswith('_'):
                 break
@@ -59,4 +58,4 @@ class Bot:
                 m_handler = self.bot.callback_query_handler(**handler_info)
             elif trigger_info == "inline_query":
                 m_handler = self.bot.inline_handler(**handler_info)
-            m_handler(klass.init(env=self.env, bot=self.bot, market=self.market))
+            m_handler(klass.init(env=self.env, bot=self.bot, market=self.db))
