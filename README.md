@@ -61,12 +61,12 @@ class ExampleReply(object):
         return ("message", {"commands": ["example",]})
 
     @classmethod
-    def init(cls, env, bot, market):
+    def init(cls, env, bot, db):
         """This method returns the function passed to the handler
         :param env, through this param you can access the environment variables
         :param bot is an istance of the Bot class
         """
-        istance = cls(env, bot, market)
+        istance = cls(env, bot, db)
         return istance.main
 
     def main(self, message):

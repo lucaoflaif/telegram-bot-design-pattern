@@ -58,4 +58,4 @@ class Bot:
                 m_handler = self.bot.callback_query_handler(**handler_info)
             elif trigger_info == "inline_query":
                 m_handler = self.bot.inline_handler(**handler_info)
-            m_handler(klass.init(env=self.env, bot=self.bot, market=self.db))
+            m_handler(klass.init(env=self.env, bot=self.bot, db=self.db))
