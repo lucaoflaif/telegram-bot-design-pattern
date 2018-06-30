@@ -1,2 +1,2 @@
-"""models are object that represents entities in a database.
+"""models are objects that represents entities in a database.
 """
